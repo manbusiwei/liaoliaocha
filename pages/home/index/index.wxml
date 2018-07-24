@@ -1,0 +1,100 @@
+<!--pages/home/index/index.wxml-->
+<import src="../../template/moreFormTemplate/moreFormTemplate.wxml" />
+<view class="answer" wx:if="{{showAnswerBox}}">
+	<view class="ans_top">
+		<view class="user_head">
+			<image class='userImg' src="{{questionInfo.topicUserAvatarUrl}}"></image>
+		</view>
+		<image class="questionImg" src="/assets/02_01.question.png"></image>
+		<view class="user_name">{{questionInfo.topicUserNickName}}</view>
+		<view wx:if="{{hasQuestionInfo}}" class="answerBox flex1_6">
+			<view class="flex1">问：</view>
+			<view class="flex6">
+				<text>{{questionInfo.question}}</text>
+			</view>
+		</view>
+		<view wx:if="{{!hasQuestionInfo}}" bindtap='toAsk' class="toAsk answerBox flex1_6">
+			暂无题目，去提问
+		</view>
+	</view>
+	<view class="ans_edit flex1_6">
+		<view class="flex1">
+			<view class="ans_user">
+				<open-data class="userImg" type="userAvatarUrl"></open-data>
+			</view>
+		</view>
+		<view class="edit_area flex6">
+			<form  bindsubmit="sendAnswer" report-submit="true">
+				<view class="areaBox">
+					<image class="line1" src='/assets/line.png'></image>
+					<image class="line2"  src='/assets/line.png'></image>
+					<image class="line3"  src='/assets/line.png'></image>
+					<textarea bindinput='checkInputAnswer' maxlength="35" show-confirm-bar="false" placeholder-class='placeClass' placeholder="{{isSelbst?'不能回答自己的问题':'请输入您的答案'}}" value='{{answerValue}}'></textarea>
+					<text class="wordNum">{{answerValueNum}}/35</text>
+				</view>
+				<view class='btnBox'>
+					<button class="{{isSelbst?'forbidBtn':''}}" formType="submit" style='position:relative'>
+						<view class="formBox" style="background:{{isSelbst?'#ccc':'#aac66b'}}">
+							<text>发送</text>
+							 <form class='tranBtn'  bindsubmit="sendAnswer" report-submit="true">
+								<button class='tranBtn'  formType="submit">
+									<view class='formBox'>
+										<form class='tranBtn'  bindsubmit="sendAnswer" report-submit="true">
+											<button class='tranBtn'  formType="submit">
+												<view class='formBox'></view>
+											</button>
+										</form>
+										</view>
+								</button>
+							</form> 
+							<!-- <template is="moreFormTpl" data="{{answerFormIdNum}}" /> -->
+						</view> 
+					</button>
+				</view>
+			</form>
+		</view>
+	</view>
+	<view class="ans_tips" hidden='{{}}'>
+		<text class='tips_tit'>活动规则：</text>
+		<text class="tips_item">1. 发出你的暗号，并耐心等待；</text>
+		<text class="tips_item">2.朋友选中你的暗号回答，匹配成功，可以获得和他交换微信的机会!</text>
+	</view>
+</view>
+<view class="ask" wx:if="{{showAskBox}}">
+	<view class="ask_tips">
+		<text class='tips_tit'>撩撩茶活动规则</text>
+		<text class="tips_item">1. 发出你的暗号，并耐心等待；</text>
+		<text class="tips_item">2.朋友选中你的暗号回答，匹配成功，可以获得和他交换微信的机会!</text>
+	</view>
+	<view class="askBox">
+		<view class="ask_edit">
+			<view class='ask_user'>
+				<open-data class="userImg" type="userAvatarUrl"></open-data>
+			</view>
+			<view class="area">
+				<image class="line1" src="/assets/line.png"></image>
+				<image class="line2" src="/assets/line.png"></image>
+				<textarea bindinput='checkInputAsk' maxlength="25" placeholder-class='placeClass' placeholder='请输入您的问题' value="{{askValue}}"></textarea>
+				<text>{{askValueNum}}/25</text>
+			</view>
+		</view>
+		<form  bindsubmit="sendAsk" report-submit="true">
+			<button formType="submit" style='position:relative'>
+				<view class="formBox" style='background:#aac66b'>
+					<text>发暗号</text>
+					<form class='tranBtn'  bindsubmit="sendAsk" report-submit="true">
+						<button class='tranBtn'  formType="submit">
+							<view class='formBox'>
+								<form class='tranBtn'  bindsubmit="sendAsk" report-submit="true">
+									<button class='tranBtn'  formType="submit">
+										<view class='formBox'></view>
+									</button>
+								</form>
+								</view>
+						</button>
+					</form>
+				</view> 
+			</button>
+		</form>
+	</view>
+</view>

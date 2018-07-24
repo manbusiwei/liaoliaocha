@@ -1,0 +1,41 @@
+/* pages/loading/loading.wxss */
+page{
+	background: #37404E;
+	height: 100%;
+	text-align: center;
+}
+.logo{
+	width: 60%;
+	height: 20%;
+	margin: 20% auto;
+}
+.load{
+	font-size: 20rpx;
+	color: #BECBD8;
+	letter-spacing: 1.92px;
+}
+
+.load>image{
+	width: 40rpx;
+	height: 40rpx;
+}
+.userBtn{
+	width: 45%;
+	margin: 120rpx  auto;
+	background: #AAC66B;
+	border-radius: 100rpx;
+	height: 80rpx;
+}
+.userBtn image{
+	height: 100%;
+	width: 100%;
+}
+
+
+
+
+
+
+
+
+

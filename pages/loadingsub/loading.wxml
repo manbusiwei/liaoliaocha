@@ -1,0 +1,10 @@
+<!--pages/loading/loading.wxml-->
+	<image class="logo" src="/assets/01_01.logo.png"></image>
+	<view class="load">
+		<image src="/assets/01_01.tea.png" class="loadImg"></image>
+		<view>LOADING ...</view>
+		<button class="userBtn" wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> <image src='/assets/login.png'></image></button>
+		<button class="userBtn" open-type="getPhoneNumber" bindgetphonenumber="getphonenumber"> 获取手机号</button>
+		<button class='userBtn' bindtap='getPic'>选择照片</button>
+		<image wx:for="{{tempFilePaths}}" src="{{item}}" wx:key="index"></image>
+	</view>

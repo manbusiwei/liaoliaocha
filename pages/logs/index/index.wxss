@@ -1,0 +1,210 @@
+page{
+	background: #F1F5F9;
+}
+ @import "/utils/DINCond-Medium.wxss"; 
+.tab{
+	display: flex;
+	line-height: 90rpx;
+	background: #37404e;
+}
+.date_line{
+	position: absolute;
+	z-index: -1;
+	width: 2rpx;
+	height: 100%;
+	left: 25%;
+}
+.tab>view{
+	flex: 1;
+	font-size: 30rpx;
+	color: #BECBD8;
+	text-align: center;
+}
+.tab>view.active{
+	color: #AAC66B;
+}
+.tab>view.active text{
+	border-bottom: 4rpx solid #AAC66B;
+	padding-bottom: 10rpx;
+}
+.dataBox{
+	
+}
+.dataBox .item{
+	display: flex;
+	color: #37404E;
+	/* height: 346rpx; */
+}
+.dataBox .item .date{
+	width: 25%;
+	text-align: center;
+	padding-top: 28rpx;
+	font-family: 'DINCond'; 
+	border-right: 2rpx solid #C4D0DC;
+}
+.dataBox .item .date .big{
+	font-size: 72rpx;
+}
+.dataBox .item .cont{
+	width: 75%;
+	padding: 50rpx 40rpx 0;
+	box-sizing: border-box;
+}
+.dataBox .item .cont .contBox{
+	border-bottom: 4rpx dashed #C4D0DC;
+}
+.dataBox .item .cont .cont_tit{
+	position: relative;
+}
+.dataBox .item .cont .cont_tit .newNum{
+	width: 10rpx;
+	height: 10rpx;
+	border-radius: 50%;
+	text-align: center;
+	background: #000;
+	color: #fff;
+	position: absolute;
+	left:-40rpx;
+	margin-left: -3rpx;
+	top: 24rpx;
+	margin-top: -5rpx;
+	font-size: 28rpx;
+}
+.dataBox .item .cont .cont_tit .newNum.active{
+	background: #FF6464;
+	height: 42rpx;
+	width: 42rpx;
+	top: 0;
+	margin-top: 0;
+	margin-left: -20rpx;
+	line-height: 42rpx;
+}
+.dataBox .item .cont .cont_tit .titl_r{
+	display: flex;
+	line-height: 42rpx;
+}
+.dataBox .item .cont .cont_tit .titl_r .l{
+	flex: 1;
+	font-size: 24rpx;
+}
+.dataBox .item .cont .cont_tit .titl_r .r{
+	flex: 3;
+	font-size: 28rpx;
+	font-weight: 100;
+}
+.dataBox .item .cont .res_count{
+	display: flex;
+	height: 66rpx;
+	line-height: 66rpx;
+	margin: 20rpx 0;
+
+}
+.dataBox .item .cont .res_count .left{
+	flex: 2;
+	font-size: 24rpx;
+}
+.dataBox .item .cont .res_count .left .count{
+	font-size: 28rpx;
+	color: #FF6464;
+}
+.dataBox .item .cont .res_count .right{
+	flex: 3;
+	font-size: 24rpx;
+	text-align: right;
+	position: relative;
+}
+.dataBox .item .cont .res_count .right .userImg{
+	width: 54rpx;
+	height: 54rpx;
+	border-radius: 50%;
+	border:6rpx solid #AAC66B;
+	position: relative;
+	float: right;
+}
+.dataBox .item .cont .res_count .right .userImg0{
+	z-index: 3;
+	right: 0;
+}
+.dataBox .item .cont .res_count .right .userImg1{
+	z-index: 2;
+	right: -10rpx;
+}
+.dataBox .item .cont .res_count .right .userImg2{
+	z-index: 1;
+	right: -20rpx;
+}
+.dataBox .item .cont .res_count .right .ell{
+	width: 26rpx;
+	height: 6rpx;
+	float: right;
+	transform: translateY(30rpx);
+	margin-left: 10rpx;
+}
+.dataBox .item .nav{
+	color: #AAC66B;
+	text-align: center;
+	line-height: 3;
+	font-size: 24rpx;
+	background: #FFFFFF;
+	border: 2rpx solid #AAC66B;
+	border-radius: 8rpx; 
+	margin-bottom: 50rpx;
+}
+.empty{
+	text-align: center;
+}
+.empty text{
+	font-size: 24rpx;
+	color: #8994A5;
+	line-height: 340rpx;
+}
+.empty .empty_nav{
+	margin: 0 40rpx;
+	background: #AAC66B;
+	border-radius: 8rpx;
+	color: #fff;
+	font-size: 28rpx;
+	line-height: 2.8;
+	display: block;
+}
+.send .item .cont .cont_tit .titl_r .l{
+	flex: none;
+	width: 86rpx;
+}
+.send .item .cont .cont_tit .titl_r .l image{
+	width: 54rpx;
+	height: 54rpx;
+	border-radius: 50%;
+	border:6rpx solid #AAC66B;
+	margin-right: 20rpx;
+}
+
+.send .item .cont .cont_tit .titl_r .r text{
+	flex: 3;
+	font-size: 24rpx;
+	font-weight: 500;
+}
+.send .item .cont .contBox{
+	
+}
+.send .item .nav{
+	color: #AAC66B;
+	font-size: 28rpx;
+	float:right;
+	background: transparent;
+	border: 0;
+	line-height: 2;
+	margin-bottom: 20rpx;
+}
+.send .next{
+	overflow: hidden
+}
+.send .nav text{
+	text-decoration: underline;
+}
+.send .nav image{
+	width: 36rpx;
+	height: 36rpx;
+	margin-left: 10rpx;
+	transform: translateY(10rpx);
+}

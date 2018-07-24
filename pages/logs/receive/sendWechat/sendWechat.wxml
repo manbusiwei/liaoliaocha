@@ -1,0 +1,32 @@
+<!--pages/logs/receive/sendWechat/sendWechat.wxml-->
+<view class="friend">
+	<image src='/assets/suc.png'></image>
+	<view class='congratulate'>恭喜您！找到了默契的伙伴！</view>
+	<view class='userBox'>
+		<text>{{myName}}</text>
+		<image class='my' src='{{myImg}}'></image>
+		<image class='she' src='{{friendImg}}'></image>
+		<text>{{friendName}}</text>
+	</view>
+</view>
+<view class="edit">
+	<text>您愿意给TA发送自己的微信号吗？</text>
+	<input placeholder='请输入您的微信号' bindinput='setWechatNum'></input>
+	<view class='btnBox'>
+		<navigator open-type='navigateBack' class='cancel'>还是算了</navigator>
+		<view class="confirm" bindtap='sendWechatNum'>马上发送</view>
+	</view>
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+

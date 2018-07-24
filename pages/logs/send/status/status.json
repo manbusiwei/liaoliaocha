@@ -1,0 +1,6 @@
+{
+	"navigationBarTitleText": "接头暗号",
+	"usingComponents": {
+		"go-ans-or-ask": "/pages/components/goAnsOrAsk/goAnsOrAsk"
+	}
+}

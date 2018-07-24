@@ -1,0 +1,201 @@
+/* pages/home/index/index.wxss */
+/* @import "../../template/moreFormTemplate/moreFormTemplate.wxss";  */
+page {
+    height: 100%;
+    background: #37404e;
+}
+.placeClass{
+	font-size: 32rpx;
+	color: #D9E2EA;
+}
+.answer {
+    margin: 0 auto;
+    padding-top: 10%;
+    width: 85%;
+}
+
+.answer .ans_top {
+    min-height: 200rpx;
+    background: #aac66b;
+    text-align: center;
+    border-radius: 8rpx 8rpx 0 0;
+    position: relative;
+    font-family: Microsoft YaHei;
+}
+
+.answer .ans_top .user_head {
+    position: absolute;
+    top: -66rpx;
+    width: 130rpx;
+    height: 130rpx;
+    border-radius: 50%;
+    border: 6rpx solid #aac66b;
+    left: 50%;
+    margin-left: -65rpx;
+}
+
+.answer .ans_top .questionImg {
+    position: absolute;
+    right: 20rpx;
+    top: 20rpx;
+    width: 146rpx;
+    height: 106rpx;
+}
+
+.flex1_6 {
+    display: flex;
+}
+
+.flex1_6 .flex1 {
+    flex: 1;
+    margin-right: 10rpx;
+}
+
+.flex1_6 .flex6 {
+    flex: 6;
+}
+
+.answer .ans_top .user_name {
+    padding-top: 80rpx;
+    font-family: MicrosoftYaHei;
+    font-size: 12px;
+	min-height: 32rpx;
+    color: #f6ff00;
+}
+
+.answer .ans_top .answerBox {
+    padding: 30rpx 70rpx;
+    color: #fff;
+    font-size: 32rpx;
+    text-align: left;
+	line-height: 1.5
+}
+
+.answer .ans_edit {
+    height: 460rpx;
+    background: #fff;
+}
+
+.answer .ans_edit {
+    padding: 30rpx 30rpx;
+    display: flex;
+    font-size: 32rpx;
+    text-align: left;
+}
+
+.answer .ans_edit .ans_user {
+    width: 90rpx;
+    height: 90rpx;
+    border: 6rpx solid #aac66b;
+    border-radius: 50%;
+    margin-right: 10rpx;
+	overflow: hidden;
+}
+
+.answer .ans_edit .areaBox {
+    height: 70%;
+    position: relative;
+    line-height: 104rpx;
+}
+
+.answer .ans_edit .areaBox image {
+    position: absolute;
+    top: 33%;
+    width: 100%;
+    height: 2rpx;
+}
+
+.answer .ans_edit .areaBox .line2 {
+    top: 62%;
+}
+
+.answer .ans_edit .areaBox .line3 {
+    top: 95%;
+}
+
+.answer .ans_edit .areaBox textarea {
+    height: 100%;
+    width: 100%;
+    font-size: 32rpx;
+    color: #aac66b;
+}
+
+.answer .ans_edit .areaBox .wordNum {
+    position: absolute;
+    bottom: 5%;
+    right: 30rpx;
+    font-size: 24rpx;
+    color: #d9e2ea;
+}
+.btnBox{
+	margin-top: 30rpx;
+}
+.button-hover{
+	background: transparent;
+}
+button {
+	 width: 10rpx; 
+	height: 10rpx;
+	background: transparent;
+	position: relative;
+	overflow: visible;
+	display: inline-block
+}
+button.forbidBtn{
+	background: #ccc;
+	cursor: not-allowed;
+}
+button::after{
+	border:none;
+}
+button .tranBtn{
+	position: absolute;
+	top: 0;
+	left:0;
+}
+button .formBox{
+    border-radius: 8rpx;
+    color: #fff;
+	position: absolute;
+	width: 450rpx;
+	height: 90rpx;
+	background: transparent;
+	left:0;
+	top:0;
+}
+.askBox button .formBox{
+	width: 670rpx
+}
+.answer .ans_tips {
+    height: 140rpx;
+    background: #f1f5f9;
+    border-radius: 0 0 8rpx 8rpx;
+    padding: 30rpx;
+}
+.answer .ans_tips text{
+	display: block
+}
+.answer .ans_tips .tips_tit {
+    font-size: 24rpx;
+    color: #000;
+    line-height: 36rpx;
+}
+
+.answer .ans_tips .tips_item {
+    font-family: MicrosoftYaHeiLight;
+	font-weight: 100;
+    font-size: 20rpx;
+    color: #434B59;
+    line-height: 18px;
+letter-spacing: 0.03px;
+}
+
+
+
+
+
+
+
+
+
+

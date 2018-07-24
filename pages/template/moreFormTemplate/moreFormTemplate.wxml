@@ -1,0 +1,16 @@
+<template name="moreFormTpl">
+	<form class='tranBtn'  bindsubmit="sendAnswer" report-submit="true">
+		<button class='tranBtn'  formType="submit">
+			<view class='formBox'>
+			
+				<form class='tranBtn'  bindsubmit="sendAnswer" report-submit="true">
+					<button class='tranBtn'  formType="submit">
+						<view class='formBox'>
+						
+						</view>
+					</button>
+				</form>
+			</view>
+		</button>
+	</form>
+</template>

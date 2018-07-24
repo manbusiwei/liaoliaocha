@@ -1,0 +1,38 @@
+/* pages/home/sendSuccess/sendSuccess.wxss */
+
+.iconBox{
+	padding: 150rpx;
+	text-align: center;
+	color: #fff;
+	font-size: 18px;
+	font-weight: 100;
+}
+.iconBox image{
+	width: 110rpx;
+	height: 110rpx;
+	margin:0 40rpx 40rpx;
+}
+.btnBox{
+	padding: 0 40rpx;
+	display: flex;
+}
+.btnBox navigator{
+	border: 2rpx solid #AAC66B;
+	border-radius: 8rpx;
+	color: #AAC66B;
+	flex: 1;
+    background: #37404e;
+	font-size: 30rpx;
+	text-align: center;
+	line-height: 2.5
+}
+navigator.back{
+	margin-right: 20rpx;
+}
+navigator.tolog{
+	margin-left: 20rpx;
+}
+
+
+
+

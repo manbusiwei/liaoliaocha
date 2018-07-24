@@ -1,0 +1,83 @@
+/* pages/logs/receive/sendWechat/sendWechat.wxss */
+page{
+	background: #F1F5F9;
+}
+.friend{
+	background: #37404E;
+	height: 360rpx;
+	padding: 40rpx 0 60rpx;
+	text-align: center;
+}
+.friend>image{
+	width: 110rpx;
+	height: 110rpx;
+}
+.friend .congratulate{
+	font-size: 36rpx;
+	color: #FFFFFF;
+	line-height: 3.5;
+}
+.friend .userBox{
+	line-height: 130rpx;
+	font-size: 24rpx;
+	color: #F6FF00;
+	display: flex;
+	justify-content: center;
+}
+.friend .userBox image{
+	width: 118rpx;
+	height: 118rpx;
+	border-radius: 50%;
+	border: 6rpx solid #AAC66B;
+	position: relative;
+}
+.friend .userBox image.my{
+	left: 10rpx;
+	margin-left: 10rpx;
+}
+.friend .userBox image.she{
+	right: 10rpx;
+	margin-right: 10rpx;
+}
+.edit{
+	padding: 40rpx;
+}
+.edit>text{
+	font-size: 28rpx;
+	color: #37404E;
+}
+.edit input{
+	background: #FFFFFF;
+	border: 2rpx solid #E3EAF1;
+	border-radius: 8rpx;
+	line-height: 100rpx;
+	height: 100rpx;
+	font-size: 32rpx;
+	padding-left: 30rpx;
+	margin: 30rpx 0 60rpx;
+}
+.edit .btnBox{
+	display: flex;
+	text-align: center;
+	color: #fff;
+	font-size: 28rpx;
+	line-height: 72rpx;
+}
+.edit .btnBox > view{
+	flex: 1;
+	border-radius: 8rpx;
+}
+.edit .btnBox .cancel{
+	flex: 1;
+	border-radius: 8rpx;
+	margin-right: 15rpx;
+	background: #B1BFCE;
+}
+.edit .btnBox .confirm{
+	margin-left: 15rpx;
+	background: #AAC66B;
+}
+
+
+
+

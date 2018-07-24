@@ -1,0 +1,28 @@
+
+<view class="ask">
+	<view class="ask_tips">
+	</view>
+	<view class="askBox">
+		<view class="ask_edit">
+			<view class='ask_user'>
+				<open-data class="userImg" type="userAvatarUrl"></open-data>
+			</view>
+			<view class="area">
+				<text>人生就像一盒巧克力,你永远都不知道下一块会是什么味道。</text>
+				<view>--阿甘</view>
+			</view>
+			<view class="area">
+				<text>世界上一成不变的东西，只有“任何事物都是在不断变化的”这条真理。</text>
+				<view>--斯里兰卡</view>
+			</view>
+			<view class="area">
+				<text>时间是一切财富中最宝贵的财富。</text>
+				<view>-- 德奥弗拉斯多</view>
+			</view>
+			<view class="area">
+				<text>在年轻人的颈项上，没有什么东西能比事业心这颗灿烂的宝珠更迷人的了。</text>
+				<view>--哈菲兹</view>
+			</view>
+		</view>
+	</view>
+</view>

@@ -1,0 +1,22 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+page{
+	font-family: Microsoft YaHei;
+	font-weight: 400;
+    height: 100%;
+    background: #37404e;
+}
+.userImg {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+	overflow: hidden
+}

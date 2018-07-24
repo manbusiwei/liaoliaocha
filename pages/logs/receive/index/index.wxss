@@ -1,0 +1,203 @@
+/* pages/logs/receive/index/index.wxss */
+page{
+	background: #fff;
+	color: #37404E;
+	font-size: 24rpx;
+}
+.ask{
+	background: #37404E;
+	text-align: center;
+	padding-bottom: 40rpx;
+	position: relative;
+}
+.ask .myImg{
+	margin: 24rpx;
+	width: 122rpx;
+	height: 122rpx;
+	border: 6rpx solid #AAC66B;
+	border-radius: 50%;
+	overflow: hidden;
+	display: inline-block;
+}
+.ask .ask_cont{
+	margin: 0 80rpx;
+	padding: 0 80rpx;
+	position: relative;
+	font-size:34rpx;
+	color: #F1F5F9;
+	line-height: 1.5;
+	font-weight: 100;
+	text-align: left;
+}
+.ask>view image{
+	position: absolute;
+	width: 38rpx;
+	height: 34rpx;
+	transform: translateY(10rpx)
+}
+.ask image.before{
+	left: 0;
+}
+.ask image.after{
+	right: 0;
+}
+.total{
+	line-height: 72rpx;
+	padding-left: 30rpx;
+	background: #F1F5F9;
+}
+.total .red{
+	color: #FF6464;
+}
+.dataBox{
+}
+.dataBox .item{
+	display: flex;
+	padding: 30rpx;
+	border-bottom: 2rpx solid #E8EDF1;
+}
+.dataBox .item .userBox{
+	width: 100rpx;
+}
+.dataBox .item .userBox image{
+	width: 68rpx;
+	height: 68rpx;
+	border-radius: 50%;
+	border: 6rpx solid #AAC66B;
+	margin-right: 20rpx;
+}
+.dataBox .item .detail{
+	padding-top: 6rpx;
+	font-size: 28rpx;
+	font-weight: 100;
+	line-height: 1.5;
+}
+.dataBox .item .tab{
+	padding-top: 20rpx;
+}
+.dataBox .item .tab image{
+	height: 40rpx;
+	margin-right: 20rpx;
+}
+.dataBox .item .tab .yes{
+	width: 70rpx;
+}
+.dataBox .item .tab .noyes{
+	width: 90rpx;
+}
+.dataBox .item .tab .weChat{
+	width: 160rpx;
+}
+.item .cont{
+	flex: 4;
+}
+.item .nav{
+	color: #AAC66B;
+	font-size: 28rpx;
+	float:right;
+	margin-top: -10rpx;
+}
+.item .nav text{
+	text-decoration: underline;
+}
+.item .nav image{
+	width: 36rpx;
+	height: 36rpx;
+	margin:0 0 0 10rpx;
+	transform: translateY(10rpx);
+}
+.dialog{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0,0,0,0.8);
+	padding: 200rpx 60rpx 0;
+	font-size: 28rpx;
+}
+.dialog .d_ask{
+	padding: 50rpx 60rpx;
+	background: #AAC66B;
+	border-top-left-radius: 8rpx;
+	border-top-right-radius: 8rpx;
+	color: #fff;
+}
+.dialog .d_ask view{
+	text-align: center;
+	margin-bottom: 20rpx;
+}
+.dialog .d_ask text{
+	text-align: left;
+	font-weight: 100;
+	line-height: 1.5;
+}
+.dialog .d_answer{
+	background: #fff;
+	position: relative;
+	padding: 60rpx 60rpx 0;
+	text-align: center;
+}
+.dialog .d_answer image{
+	width: 68rpx;
+	height: 68rpx;
+	border-radius: 50%;
+	border: 6rpx solid #AAC66B;
+	position: absolute;
+	left: 50%;
+	margin-left: -36rpx;
+	top: -36rpx;
+}
+.dialog .d_answer .user{
+
+}
+.dialog .d_answer .user text{
+	line-height: 2;
+}
+.dialog .d_answer .user view{
+	line-height: 1.5;
+	font-weight: 100;
+	height: 140rpx;
+}
+.dialog .btnBox{
+	font-size: 24rpx;
+	background: #F1F5F9;
+	padding: 30rpx;
+	display: flex;
+}
+.dialog .btnBox view{
+	flex: 1;
+	background: #FFFFFF;
+	border-radius: 8rpx; 
+	line-height: 68rpx;
+	text-align: center;
+}
+.dialog .btnBox .cancel{
+	margin-right: 15rpx;
+	border: 2rpx solid #FF6464;
+	color: #FF6464
+}
+.dialog .btnBox .confirm{
+	margin-left: 15rpx;
+	border: 2rpx solid #AAC66B;
+	color: #AAC66B;
+}
+.dialog .close{
+	position: relative;
+}
+.dialog .close image{
+	width: 70rpx;
+	height: 70rpx;
+	position: absolute;
+	bottom: -100rpx;
+	left: 50%;
+	margin-left: -36rpx;
+}
+
+
+
+
+
+
+
+

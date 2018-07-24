@@ -1,0 +1,5 @@
+/* pages/template/moreFormTemplate/moreFormTemplate.wxss */
+.formBox{
+	font-size: 10rpx;
+}
+

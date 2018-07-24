@@ -1,0 +1,47 @@
+{
+    "pages": [
+        "pages/loading/loading",
+		"pages/loadingsub/loading",
+        "pages/logs/index/index",
+        "pages/logs/receive/index/index",
+        "pages/logs/receive/sendWechat/sendWechat",
+        "pages/home/index/index",
+        "pages/home/wait/wait",
+        "pages/home/sendSuccess/sendSuccess",
+        "pages/logs/send/status/status",
+        "pages/template/moreFormTemplate/moreFormTemplate",
+        "pages/onlyShow/show/onlyShow",
+        "pages/onlyShow/index/index"
+    ],
+    "tabBar": {
+        "color": "#BECBD8",
+        "selectedColor": "#AAC66B",
+        "backgroundColor": "#37404E",
+        "borderStyle": "white",
+        "list": [
+            {
+                "pagePath": "pages/home/index/index",
+                "iconPath": "assets/02_01.tab0101.png",
+                "selectedIconPath": "assets/02_01.tab0102.png",
+                "text": "首页"
+            },
+            {
+                "pagePath": "pages/logs/index/index",
+                "iconPath": "assets/02_01.tab0201.png",
+                "selectedIconPath": "assets/02_01.tab0202.png",
+                "text": "记录"
+            }
+        ]
+    },
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#37404E",
+        "navigationBarTitleText": "撩撩茶",
+        "navigationBarTextStyle": "white"
+    },
+    "networkTimeout": {
+        "request": 100000,
+        "downloadFile": 100000
+    },
+    "debug": true
+}

@@ -1,0 +1,6 @@
+{
+	"navigationBarTitleText": "记录",
+	"usingComponents":{
+		"go-ans-or-ask":"/pages/components/goAnsOrAsk/goAnsOrAsk"
+	}
+}

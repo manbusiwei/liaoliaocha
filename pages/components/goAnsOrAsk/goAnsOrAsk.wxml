@@ -1,0 +1,7 @@
+<!--pages/components/goAnsOrAsk/goAnsOrAsk.wxml-->
+<view wx:if="{{goType=='ask'}}" bindtap="goHomeAsk">
+	{{btnText}}
+</view>
+<view wx:if="{{goType=='answer'}}" bindtap="goHomeAnswer">
+	{{btnText}}
+</view>

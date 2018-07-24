@@ -1,0 +1,99 @@
+/* pages/home/wait/wait.wxss */
+
+.iconBox {
+    padding: 150rpx 0 80rpx;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 100;
+}
+
+.iconBox image {
+    width: 110rpx;
+    height: 110rpx;
+    margin: 0 40rpx 40rpx;
+}
+
+.iconBox text {
+    font-size: 24rpx;
+    color: #becbd8;
+    line-height: 48rpx;
+}
+
+.ask_answer {
+    display: flex;
+    padding: 50rpx 40rpx 0;
+}
+
+.ask_answer>view {
+    flex: 1;
+    border: 2rpx dashed #aac66b;
+    border-radius: 16rpx;
+	padding:84rpx 40rpx 60rpx;
+	text-align: center;
+	position: relative;
+	box-sizing: border-box;
+	max-width: 50%;
+}
+.ask_answer .ask{
+	margin-right: 20rpx;
+}
+.ask_answer .answer{
+	margin-left: 20rpx;
+}
+.userImgBox {
+    position: absolute;
+    top: -66rpx;
+    width: 130rpx;
+    height: 130rpx;
+    border-radius: 50%;
+    border: 6rpx solid #aac66b;
+    left: 50%;
+    margin-left: -65rpx;
+	overflow: hidden
+}
+.ask_answer .userName{
+	font-size: 24rpx;
+	color: #F6FF00;
+	line-height: 36rpx;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	width: 100%;
+	white-space: nowrap;
+}
+.ask_answer .type{
+	color:#fff ;
+	font-size:40rpx ;
+	line-height: 80rpx;
+}
+.ask_answer .cont{
+	font-size: 28rpx;
+	color: #F1F5F9;
+	text-align: left;
+	line-height: 46rpx;
+	font-weight: 100
+}
+.goHome{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: #4A5360;
+	font-size: 28rpx;
+	color: #fff;
+	text-align: center;
+	display: flex;
+	line-height: 72rpx;
+}
+.goHome view{
+	flex:1;
+	margin: 40rpx;
+	background: #aac66b;
+	border-radius: 8rpx;
+}
+.goHome .goAsk{
+	margin-right: 20rpx;
+}
+.goHome .goAnswer{
+	margin-left: 20rpx;
+}

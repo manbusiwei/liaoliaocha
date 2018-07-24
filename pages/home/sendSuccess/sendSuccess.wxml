@@ -1,0 +1,9 @@
+<!--pages/home/sendSuccess/sendSuccess.wxml-->
+<view class='iconBox'>
+	<image src='/assets/suc.png'></image>
+	<view>发送成功！</view>
+</view>
+<view class='btnBox'>
+	<navigator open-type='navigateBack' class='back'>返回首页</navigator>
+	<navigator open-type='switchTab' url='/pages/logs/index/index' class='tolog'>查看</navigator>
+</view>

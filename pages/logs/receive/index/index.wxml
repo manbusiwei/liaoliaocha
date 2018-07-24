@@ -1,0 +1,59 @@
+<!--pages/logs/receive/index/index.wxml-->
+<view class="ask">
+	<view class="myImg">
+		<open-data class="userImg" type="userAvatarUrl"></open-data>
+	</view>
+	<view class='ask_cont'>
+		<image class="before" src="/assets/07_01.quotation_mark01.png"></image>
+		<text>{{detailData.myQuestion}}</text>
+		<image class="after" src='/assets/07_01.quotation_mark02.png'></image>
+	</view>
+</view>
+<view class="total">
+	<text>共</text>
+	<text class='red' decode='true'>&nbsp;{{detailData.replyNum}}&nbsp;</text>
+	<text>人回答</text>
+</view>
+<view class="dataBox">
+	<view class="item" wx:for="{{detailData.topicDetailReplyVOS}}" wx:key="index">
+		<view class="userBox">
+			<image src="{{item.replyUserAvatarurl}}"></image>
+		</view>
+		<view class="cont">
+			<text class="userName">{{item.replyUserNickName}}</text>
+			<view class="detail">{{item.replyContent}}</view>
+			<view class="tab">
+				<!-- <view>满意</view>
+				<view class="red">不满意</view>
+				<view>已发送微信号</view> -->
+				<image wx:if="{{item.matchState==1||item.matchState==3}}" class='yes' src='/assets/07_01.status01.png'></image>
+				<image wx:if="{{item.matchState==2}}" class='noyes' src='/assets/07_01.status02.png'></image>
+				<image wx:if="{{item.matchState==3}}" class='weChat' src='/assets/07_01.status03.png'></image>
+				<view wx:if="{{item.matchState==1||item.matchState==0}}" class="nav" data-item="{{item}}" bindtap='goChooseRevert'>
+					<text>{{item.matchState==1?'发送微信号':'选择满意度'}}</text>
+					<image src='/assets/07_01.arrow.png'></image>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>
+<view class="dialog" hidden='{{isHiddenDialog}}'>
+	<view class="d_ask">
+		<view>我的提问</view>
+		<text >{{showDialogData.myQuestion}}</text>
+	</view>
+	<view class="d_answer">
+		<image src="{{showDialogData.replyUserAvatarurl}}"></image>
+		<view class="user">
+			<text><text decode='true'>{{showDialogData.replyUserNickName}}&nbsp;</text>的回答</text>
+			<view>{{showDialogData.replyContent}}</view>
+		</view>
+	</view>
+	<view class='btnBox'>
+		<view class="cancel" data-cont="2" bindtap='chooseWhetherContentment'>不满意</view>
+		<view class="confirm" data-cont="1" bindtap='chooseWhetherContentment'>满意</view>
+	</view>
+	<view class='close'>
+		<image bindtap='closeDialog' src='/assets/close.png'></image>
+	</view>
+</view>

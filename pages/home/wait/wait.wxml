@@ -1,0 +1,34 @@
+<!--pages/home/wait/wait.wxml-->
+<view class='iconBox'>
+	<image src='/assets/03_01.icon.png'></image>
+	<view>等待匹配中...</view>
+	<text>吃点东西小憩一会儿吧^_^</text>
+</view>
+<view class='ask_answer'>
+	<view class="ask">
+		<view class="userImgBox">
+			<image class="userImg" src="{{pageData.topicUserVO.avatarUrl}}"></image>
+		</view>
+		<view class='userName'>{{pageData.topicUserVO.nickName}}{{pageData.topicUserVO.nickName}}</view>
+		<view class='type'>问</view>
+		<view class='cont'>{{pageData.topicUserVO.question}}</view>
+	</view>
+	<view class="answer">
+		<view class="userImgBox">
+			<open-data class="userImg" type="userAvatarUrl"></open-data>
+		</view>
+		<view class='userName'><open-data type="userNickName"></open-data></view>
+		<view class='type'>答</view>
+		<view class='cont'>{{pageData.topicReplyUserVO.answer}}</view>
+	</view>
+</view>
+
+<view class='goHome'>
+	<view class="goAsk" bindtap='goHomeAsk'>发暗号</view>
+	<view class="goAnswer" bindtap='goHomeAnswer'>继续答题</view>
+</view>
+
+
+
+
+

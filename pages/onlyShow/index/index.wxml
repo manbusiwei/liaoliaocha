@@ -1,0 +1,59 @@
+<!--pages/home/index/index.wxml-->
+<import src="../../template/moreFormTemplate/moreFormTemplate.wxml" />
+<view class="answer" wx:if="{{showAnswerBox}}">
+	<view class="ans_top">
+		<view class="user_head">
+			<image class='userImg' src="{{questionInfo.topicUserAvatarUrl}}"></image>
+		</view>
+		<image class="questionImg" src="/assets/02_01.question.png"></image>
+		<view class="user_name">{{questionInfo.topicUserNickName}}</view>
+		<view class="answerBox flex1_6">
+			<view class="flex1">问：</view>
+			<view class="flex6">
+				<text>{{questionInfo.question}}</text>
+			</view>
+		</view>
+	</view>
+	<view class="ans_edit flex1_6">
+		<view class="flex1">
+			<view class="ans_user">
+				<open-data class="userImg" type="userAvatarUrl"></open-data>
+			</view>
+		</view>
+		<view class="edit_area flex6">
+			<form  bindsubmit="sendAnswer" report-submit="true">
+				<view class="areaBox">
+					<image class="line1" src='/assets/line.png'></image>
+					<image class="line2"  src='/assets/line.png'></image>
+					<image class="line3"  src='/assets/line.png'></image>
+					<textarea bindinput='checkInputAnswer' maxlength="35" show-confirm-bar="false" placeholder-class='placeClass' placeholder="{{isSelbst?'不能回答自己的问题':'请输入您的答案'}}" value='{{answerValue}}'></textarea>
+					<text class="wordNum">{{answerValueNum}}/35</text>
+				</view>
+				<view class='btnBox'>
+					<button class="{{isSelbst?'forbidBtn':''}}" formType="submit" style='position:relative'>
+						<view class="formBox" style="background:{{isSelbst?'#ccc':'#aac66b'}}">
+							<text>发送</text>
+							 <form class='tranBtn'  bindsubmit="sendAnswer" report-submit="true">
+								<button class='tranBtn'  formType="submit">
+									<view class='formBox'>
+										<form class='tranBtn'  bindsubmit="sendAnswer" report-submit="true">
+											<button class='tranBtn'  formType="submit">
+												<view class='formBox'></view>
+											</button>
+										</form>
+										</view>
+								</button>
+							</form> 
+							<!-- <template is="moreFormTpl" data="{{answerFormIdNum}}" /> -->
+						</view> 
+					</button>
+				</view>
+			</form>
+		</view>
+	</view>
+	<view class="ans_tips">
+		<text class='tips_tit'>活动规则：</text>
+		<text class="tips_item">1. 发出你的暗号，并耐心等待；</text>
+		<text class="tips_item">2.朋友选中你的暗号回答，匹配成功，可以获得和他交换微信的机会!</text>
+	</view>
+</view>

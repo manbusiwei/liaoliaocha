@@ -1,0 +1,110 @@
+<!--pages/logs/index/index.wxml-->
+<image class='date_line' hidden='true' src='/assets/06_01.date_line.png'></image>
+<view class="tab">
+	<view class="reseive_tab {{!isHiddenReseive?'active':''}}" data-type="r" bindtap="cutShowType">我<text>收到</text>的</view>
+	<view class="send_tab {{isHiddenReseive?'active':''}}" data-type="s" bindtap="cutShowType">我<text>发出</text>的</view>
+</view>
+<view class="typeList">
+	<view class="reseive dataBox" hidden="{{isHiddenReseive}}">
+		<view class="empty" wx:if="{{myAskList.length==0}}">
+			<text>暂无数据</text>
+			<go-ans-or-ask go-type="ask" btn-text="发布提问" class='empty_nav'></go-ans-or-ask>
+		</view>
+		<view class="item" wx:for="{{myAskList}}" wx:key="item.topicId">
+			<view class="date">
+				<text>{{item.month>10?item.month:'0'+(item.month)}}/</text>
+				<text class="big">{{item.day>10?item.day:'0'+item.day}}</text>
+				<view>{{item.time}}</view>
+			</view>
+			<view class="cont">
+				<view class="contBox">
+					<view class="cont_tit">
+						<view class="newNum active">{{item.unReadMsgNum}}</view>
+						<view class="titl_r">
+							<view class="l">我的提问：</view>
+							<view class="r">{{item.myQuestion}}</view>
+						</view>
+					</view>
+					<view class="res_count">
+						<view class="left">
+							<text>回答人数：</text>
+							<text class="count">{{item.replyNum}}人</text>
+						</view>
+						<view class="right">
+							<image class="ell" hidden='{{item.replyNum<4}}' src='/assets/06_01.more.png'></image>
+							<image class="userImg userImg{{index}}" wx:for="{{item.avatarUrls}}" wx:for-item="image" wx:for-index="index" src="{{image}}"></image>
+						</view>
+					</view>
+					<view bindtap='goReceiveDetail' data-id="{{item.topicId}}" hidden='{{item.replyNum==0}}' class="nav">查看详情</view>
+				</view>
+			</view>
+		</view>
+		<!-- <view class="item">
+			<view class="date">
+				<text>05/</text>
+				<text class="big">28</text>
+				<view>12:30:42</view>
+			</view>
+			<view class="cont">
+				<view class="contBox">
+					<view class="cont_tit">
+						<view class="newNum"></view>
+						<view class="titl_r">
+							<view class="l">我的提问：</view>
+							<view class="r">天龙八部中慕容复和虚？</view>
+						</view>
+					</view>
+					<view class="res_count">
+						<view class="left">
+							<text>回答人数：</text>
+							<text class="count">42人</text>
+						</view>
+						<view class="right">
+							<image class="ell" src='/assets/06_01.more.png'></image>
+							<image class="userImg userImg0" src="/assets/icon.png"></image>
+							<image class="userImg userImg1" src="/assets/icon.png"></image>
+							<image class="userImg userImg2" src="/assets/icon.png"></image>
+						</view>
+					</view>
+					<navigator class="nav">查看详情</navigator>
+				</view>
+			</view>
+		</view> -->
+	</view>
+	<view class="send dataBox" hidden="{{!isHiddenReseive}}">
+		<view class="empty" wx:if="{{myAnswerList.length==0}}">
+			<text>暂无数据</text>
+			<go-ans-or-ask  class='empty_nav' go-type="answer" btn-text="回答问题"></go-ans-or-ask>
+		</view>
+		<view class="item" wx:for="{{myAnswerList}}" wx:key="item.id">
+			<view class="date">
+				<text>{{item.month>10?item.month:'0'+(item.month)}}/</text>
+				<text class="big">{{item.day>10?item.day:'0'+item.day}}</text>
+				<view>{{item.time}}</view>
+			</view>
+			<view class="cont">
+				<view class="contBox">
+					<view class="cont_tit">
+						<view class="newNum"></view>
+						<view class="titl_r">
+							<view class="l">
+								<image src="{{item.topicUserAvatarUrl}}"></image>
+							</view>
+							<view class="r">
+								<text><text decode='true'>{{item.topicUserNickName}}&nbsp;&nbsp;</text>的提问</text>
+								<view>{{item.question}}</view>
+							</view>
+						</view>
+					</view>
+					<view class="next">
+						<view class="nav" data-item="{{item}}" bindtap='goMyAnswer'>
+							<text>我的回答</text>
+							<image src='/assets/07_01.arrow.png'></image>
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
+	
+	</view>
+</view>

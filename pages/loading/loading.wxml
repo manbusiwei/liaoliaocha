@@ -1,0 +1,7 @@
+<!--pages/loading/loading.wxml-->
+	<image class="logo" src="/assets/01_01.logo.png"></image>
+	<view class="load">
+		<image src="/assets/01_01.tea.png" class="loadImg"></image>
+		<view>LOADING ...</view>
+		<button class="userBtn" wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> <image src='/assets/login.png'></image></button>
+	</view>

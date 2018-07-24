@@ -1,0 +1,57 @@
+<!--pages/home/wait/wait.wxml-->
+<image class="copyResult" src='/assets/03_04.succeed.png' hidden='{{hiddenCopyResult}}'></image>
+<view class='showHead'>
+	<view class='iconBox' wx:if="{{pageData.matchState==0}}">
+		<image src='/assets/03_01.icon.png'></image>
+		<view>等待匹配中...</view>
+		<text>吃点东西小憩一会儿吧^_^</text>
+	</view>
+	<view class='iconBox' wx:if="{{pageData.matchState==2}}">
+		<image src='/assets/03_05.icon.png'></image>
+		<view>很抱歉，题猪可能认为有更好的暗号</view>
+	</view>
+	<view class='iconBox wechatBox' wx:if="{{pageData.matchState==3}}">
+		<image src='/assets/03_03.icon.png'></image>
+		<view>默契伙伴发来了微信号，快点加TA吧！</view>
+		<view class='text'>
+			<text class='text'>TA的微信号：</text>
+			<text class='chatNum'>{{pageData.weChatNum}}</text>
+			<image bindtap='copyWechat' data-chat="{{pageData.weChatNum}}" src='/assets/03_03.copy.png'></image>
+		</view>
+	</view>
+	<view class='iconBox' wx:if="{{pageData.matchState==1}}">
+		<image src='/assets/suc.png'></image>
+		<view>恭喜您！接头暗号匹配成功啦！</view>
+	</view>
+</view>
+
+<view class="ask_answer {{(pageData.matchState==1||pageData.matchState==3)?'succ':''}}">
+	<image wx:if="{{pageData.matchState==1||pageData.matchState==3}}" class="result" src='/assets/03_02.seal.png'></image>
+	<image wx:if="{{pageData.matchState==2}}" class="result" src='/assets/03_05.seal.png'></image>
+	<view class="ask">
+		<view class="userImgBox">
+			<image class="userImg" src="{{pageData.topicUserAvatarUrl}}"></image>
+		</view>
+		<view class='userName'>{{pageData.topicUserNickName}}</view>
+		<view class='type'>问</view>
+		<view class='cont'>{{pageData.question}}</view>
+	</view>
+	<view class="answer">
+		<view class="userImgBox">
+			<open-data class="userImg" type="userAvatarUrl"></open-data>
+		</view>
+		<view class='userName'><open-data type="userNickName"></open-data></view>
+		<view class='type'>答</view>
+		<view class='cont'>{{pageData.replyContent}}</view>
+	</view>
+</view>
+
+<view class='goHome'>
+	<go-ans-or-ask  class='goAsk' go-type="ask" btn-text="发暗号"></go-ans-or-ask>
+	<go-ans-or-ask  class='goAnswer' go-type="answer" btn-text="继续答题"></go-ans-or-ask>
+</view>
+
+
+
+
+
