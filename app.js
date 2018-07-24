@@ -37,6 +37,7 @@ App({
   },
   globalData: {
     userInfo: null,
+    
 	token:'',
 	scene:Number,
   }
